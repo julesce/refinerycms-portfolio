@@ -1,15 +1,19 @@
 <% content_for :body_content_title do -%>
-  Portfolios
+  Gallery
 <% end -%>
 
 <% content_for :body_content_left do -%>
-  <% @portfolio_entries.each do | portfolio | -%>
-    <span>
-      <%= link_to raw("#{image_fu portfolio.title_image, '200x200' unless portfolio.title_image.nil?} #{portfolio.title}"),
-                  portfolio_path(portfolio) %>
-    </span>
-    <span class="content"><%= raw portfolio.body %></span>
-  <% end -%>
+  <ul class='portfolio-index'>
+    <% @portfolio_entries ||= [] %>
+    <% @portfolio_entries.each do |portfolio| -%>
+      <li>
+        <%= link_to raw("#{image_fu portfolio.images.first, '180x180#c' unless portfolio.images.first.nil?}"), portfolio_path(portfolio) %>
+        <%= link_to raw("#{portfolio.title unless portfolio.title.nil?}"), portfolio_path(portfolio) %>
+        <br/>
+        <%= raw("(#{portfolio.images.count}) images") %>
+      </li>
+    <% end -%>
+  </ul>
 <% end -%>
 
 <%= render :partial => '/shared/content_page' -%>

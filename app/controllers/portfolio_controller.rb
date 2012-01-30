@@ -3,7 +3,7 @@ class PortfolioController < ApplicationController
   before_filter :load_page, :only => [:index, :show, :empty]
 
   def index
-    if RefinerySetting.find_or_set(:portfolio_has_no_index, true)
+    if RefinerySetting.find_or_set(:portfolio_has_no_index, false)
       if (first_entry = PortfolioEntry.where(:parent_id => nil).first).present?
         redirect_to portfolio_url(first_entry)
       else
