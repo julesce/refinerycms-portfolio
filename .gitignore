@@ -60,6 +60,7 @@
 
  # RubyMine
  .idea
+ .idea/
 
  # E-texteditor
  .eprj
