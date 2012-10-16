@@ -1,81 +1,82 @@
- .bundle
- db/*.sqlite3
- log/*.log
- tmp/
- # Rails
- .bundle
- db/*.sqlite3
- db/*.sqlite3-journal
- *.log
- tmp
- tmp/**/*
+# RubyMine
+.idea
+.idea/
 
- # Documentation
- doc/api
- doc/app
- .yardoc
- .yardopts
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+# Rails
+.bundle
+db/*.sqlite3
+db/*.sqlite3-journal
+*.log
+tmp
+tmp/**/*
 
- # Public Uploads
- public/system/*
- public/themes/*
+# Documentation
+doc/api
+doc/app
+.yardoc
+.yardopts
 
- # Public Cache
- public/javascripts/cache
- public/stylesheets/cache
+# Public Uploads
+public/system/*
+public/themes/*
 
- # Vendor Cache
- vendor/cache
+# Public Cache
+public/javascripts/cache
+public/stylesheets/cache
 
- # Acts as Indexed
- index/**/*
+# Vendor Cache
+vendor/cache
 
- # Refinery Specific
- *.tmproj
- *.autobackupbyrefinery.*
- refinerycms-*.gem
- .autotest
+# Acts as Indexed
+index/**/*
 
- # Mac
- .DS_Store
+# Refinery Specific
+*.tmproj
+*.autobackupbyrefinery.*
+refinerycms-*.gem
+.autotest
 
- # Windows
- Thumbs.db
+# Mac
+.DS_Store
 
- # NetBeans
- nbproject
+# Windows
+Thumbs.db
 
- # Eclipse
- .project
+# NetBeans
+nbproject
 
- # Redcar
- .redcar
+# Eclipse
+.project
 
- # Rubinius
- *.rbc
+# Redcar
+.redcar
 
- # Vim
- *.swp
- *.swo
+# Rubinius
+*.rbc
 
- # RubyMine
- .idea
- .idea/
+# Vim
+*.swp
+*.swo
 
- # E-texteditor
- .eprj
 
- # Backup
- *~
+# E-texteditor
+.eprj
 
- # Capybara Bug
- capybara-*html
+# Backup
+*~
 
- # sass
- .sass-cache
- .sass-cache/*
+# Capybara Bug
+capybara-*html
 
- #rvm
- .rvmrc
- .rvmrc.*
+# sass
+.sass-cache
+.sass-cache/*
+
+#rvm
+.rvmrc
+.rvmrc.*
 
